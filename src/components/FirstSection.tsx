@@ -8,8 +8,8 @@ interface FirstSectionProps {}
 
 const FirstSection: FC<FirstSectionProps> = ({}) => {
   return (
-    <div className="flex flex-col">
-      <div className="bg-[#958f85] h-[50vh] w-full min-w-[100vw] flex justify-center items-end overflow-hidden">
+    <section className="flex flex-col w-screen">
+      <div className="bg-[#958f85] h-[50vh] w-screen min-w-[100vw] flex justify-center items-end overflow-hidden">
         <Image
           src={img1}
           alt="img1"
@@ -21,7 +21,7 @@ const FirstSection: FC<FirstSectionProps> = ({}) => {
           className="w-[65%] md:w-[50%] -mb-[12%] -ml-[6%] object-scale-down object-top"
         />
       </div>
-      <div className="bg-purple-700 h-[50vh] w-full min-w-[100vw] relative flex flex-col items-center gap-y-[2vh]">
+      <div className="bg-purple-700 h-[50vh] w-screen min-w-[100vw] relative flex flex-col items-center gap-y-[2vh]">
         <Image
           src={digitalCommImg}
           alt="img2"
@@ -31,7 +31,7 @@ const FirstSection: FC<FirstSectionProps> = ({}) => {
         <p className="w-[90%] md:text-[24px] md:leading-8 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ducimus ipsum soluta.</p>
         <p className="w-[90%] md:text-[35px] md:leading-[40px] font-semibold text-xl">View Case Study</p>
       </div>
-    </div>
+    </section>
   );
 };
 
