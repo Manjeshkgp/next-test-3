@@ -8,28 +8,38 @@ interface FirstSectionProps {}
 
 const FirstSection: FC<FirstSectionProps> = ({}) => {
   return (
-    <section id="section1" className="flex flex-col w-screen">
-      <div className="bg-[#958f85] h-[50vh] w-screen min-w-[100vw] flex justify-center items-end overflow-hidden">
+    <section
+      id="section1"
+      className="flex flex-col w-screen lg:flex-row-reverse"
+    >
+      <div className="bg-[#958f85] h-[50vh] lg:h-screen lg:w-[50vw] w-screen flex justify-center items-end overflow-hidden lg:items-center">
         <Image
           src={img1}
           alt="img1"
-          className="w-[65%] md:w-[50%] -mb-[12%] -ml-[6%] object-scale-down object-top"
+          className="w-[65%] md:w-[50%] -mb-[12%] -ml-[6%] object-scale-down object-top lg:m-0 lg:-ml-[5vw]"
         />
         <Image
           src={img2}
           alt="img2"
-          className="w-[65%] md:w-[50%] -mb-[12%] -ml-[6%] object-scale-down object-top"
+          className="w-[65%] md:w-[50%] -mb-[12%] -ml-[6%] object-scale-down object-top lg:m-0 lg:-ml-[5vw]"
         />
       </div>
-      <div className="bg-purple-700 h-[50vh] w-screen min-w-[100vw] relative flex flex-col items-center gap-y-[2vh]">
+      <div className="bg-purple-700 h-[50vh] lg:h-screen lg:w-[50vw] w-screen relative flex flex-col items-center gap-y-[2vh] lg:gap-y-[5vh] lg:justify-end lg:items-start lg:pl-[3vw]">
         <Image
           src={digitalCommImg}
           alt="img2"
-          className="h-[10vh] max-w-[70%] object-contain border-2 border-purple-700 absolute -top-[5%] left-[4%] rounded-lg bg-white"
+          className="h-[10vh] lg:h-[12vh] max-w-[70%] object-contain border-2 border-purple-700 absolute -top-[5%] left-[4%] rounded-lg bg-white lg:static"
         />
-        <p className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]">ABC 123</p>
-        <p className="w-[90%] md:text-[24px] md:leading-8 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ducimus ipsum soluta.</p>
-        <p className="w-[90%] md:text-[35px] md:leading-[40px] font-semibold text-xl">View Case Study</p>
+        <p className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh] lg:mt-0">
+          ABC 123
+        </p>
+        <p className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+          ducimus ipsum soluta.
+        </p>
+        <p className="w-[90%] md:text-[35px] md:leading-[40px] font-semibold text-xl lg:mb-[6vh] lg:text-base lg:mt-[6vh]">
+          View Case Study
+        </p>
       </div>
     </section>
   );
