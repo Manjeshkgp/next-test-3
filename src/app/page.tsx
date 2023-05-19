@@ -2,6 +2,7 @@ import FirstSection from "@/components/FirstSection";
 import FourthSection from "@/components/FourthSection";
 import SecondSection from "@/components/SecondSection";
 import ThirdSection from "@/components/ThirdSection";
+import FifthSection from "@/components/FifthSection";
 
 export default function Home() {
   return (
@@ -10,8 +11,9 @@ export default function Home() {
     >
       {/* <FirstSection />
       <SecondSection/>
-      <ThirdSection/> */}
-      <FourthSection/>
+      <ThirdSection/>
+      <FourthSection/> */}
+      <FifthSection/>
     </main>
   );
 }
