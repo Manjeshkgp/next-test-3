@@ -8,7 +8,7 @@ interface FirstSectionProps {}
 
 const FirstSection: FC<FirstSectionProps> = ({}) => {
   return (
-    <section className="flex flex-col w-screen">
+    <section id="section1" className="flex flex-col w-screen">
       <div className="bg-[#958f85] h-[50vh] w-screen min-w-[100vw] flex justify-center items-end overflow-hidden">
         <Image
           src={img1}

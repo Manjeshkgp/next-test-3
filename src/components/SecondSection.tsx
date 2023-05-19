@@ -6,7 +6,7 @@ import Image from "next/image";
 interface SecondSectionProps {}
 
 const SecondSection: FC<SecondSectionProps> = ({}) => {
-  return (<section className="flex flex-col w-screen h-screen">
+  return (<section id="section2" className="flex flex-col w-screen h-screen">
     <div className="h-[50vh] overflow-hidden w-screen bg-indigo-950 flex flex-row">
     <Image
           src={img1}

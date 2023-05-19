@@ -6,7 +6,7 @@ import Image from "next/image";
 interface ThirdSectionProps {}
 
 const ThirdSection: FC<ThirdSectionProps> = ({}) => {
-  return (<section className="flex flex-col w-screen h-screen">
+  return (<section id="section3" className="flex flex-col w-screen h-screen">
     <div className="h-[50vh] overflow-hidden w-screen bg-indigo-800 flex flex-row">
     <Image
           src={img1}
