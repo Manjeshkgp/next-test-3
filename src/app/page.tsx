@@ -4,10 +4,12 @@ import SecondSection from "@/components/SecondSection";
 import ThirdSection from "@/components/ThirdSection";
 import FifthSection from "@/components/FifthSection";
 import SixthSection from "@/components/SixthSection";
+import SeventhSection from "@/components/SeventhSection";
 
 export default function Home() {
   return (
     <main
+    id="main"
       className="flex flex-row overflow-x-scroll lg:container lg:flex-col lg:overflow-x-hidden"
     >
       <FirstSection />
@@ -16,6 +18,7 @@ export default function Home() {
       <FourthSection/>
       <FifthSection/>
       <SixthSection/>
+      <SeventhSection/>
     </main>
   );
 }
