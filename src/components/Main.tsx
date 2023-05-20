@@ -15,9 +15,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function Main() {
-  const main = document.getElementById("main");
   const vh = global.window.innerHeight;
-  const vw = global.window.innerWidth;
   const [scrollPosition, setScrollPosition] = useState(0);
   useEffect(() => {
     Aos.init({ duration: 500 });
