@@ -6,51 +6,61 @@ import img4 from "../assets/karavan-social-networking-app-screen-2.png";
 import img5 from "../assets/developers-for-social-media-app.png";
 import Image from "next/image";
 
-interface FifthSectionProps {}
+interface FifthSectionProps {
+  scrollPosition: number;
+  vh: number;
+}
 
-const FifthSection: FC<FifthSectionProps> = ({}) => {
+const FifthSection: FC<FifthSectionProps> = ({ scrollPosition, vh }) => {
   return (
-    <section id="section5" className="flex flex-col w-screen h-screen">
-      <div className="h-[50vh] overflow-hidden w-screen bg-cyan-400 flex flex-row justify-center flex-nowrap relative">
-        <div className="flex z-10 w-[40vw] flex-col items-center justify-between">
+    <section
+      id="section5"
+      className={
+        scrollPosition > 4 * vh - 50 && scrollPosition < 5 * vh - 50
+          ? "flex flex-col w-screen lg:flex-row-reverse lg:fixed lg:z-[100]"
+          : "flex flex-col w-screen h-screen lg:flex-row-reverse"
+      }
+    >
+      <div className="h-[50vh] overflow-hidden w-screen bg-cyan-400 flex flex-row justify-center flex-nowrap relative lg:h-screen lg:w-[55vw]">
+        <div className="flex z-10 w-[40vw] flex-col items-center justify-between lg:w-[16vw]">
           <Image
             src={img1}
             alt="img2"
-            className="w-[40vw] h-[25vh] object-cover object-bottom"
+            className="w-[40vw] h-[25vh] object-cover object-bottom lg:w-[16vw] lg:h-auto lg:-mt-[10vh]"
           />
           <Image
             src={img2}
             alt="img2"
-            className="w-[40vw] h-[25vh] object-cover object-top"
+            className="w-[40vw] h-[25vh] object-cover object-top lg:w-[16vw] lg:h-auto"
           />
         </div>
-        <div className="flex z-10 w-[40vw] flex-col justify-between">
+        <div className="flex z-10 w-[40vw] flex-col justify-between lg:w-[16vw]">
           <Image
             src={img3}
             alt="img2"
-            className="w-[40vw] object-cover object-bottom self-start md:-mt-[15vh]"
+            className="w-[40vw] object-cover object-bottom self-start md:-mt-[15vh] lg:w-[16vw] lg:m-0"
           />
           <Image
             src={img4}
             alt="img2"
-            className="w-[40vw] object-cover object-top self-end"
+            className="w-[40vw] object-cover object-top self-end lg:w-[16vw] lg:m-0"
           />
         </div>
         <Image
           src={img5}
           alt="img2"
-          className="w-[40vw] object-cover object-bottom self-end -mr-[22vw] -mb-[11vw]"
+          className="w-[40vw] object-cover object-bottom self-end -mr-[22vw] -mb-[11vw] lg:w-[16vw] lg:-mr-[5vw] lg:mb-[12vh]"
         />
       </div>
-      <div className="h-[50vh] overflow-hidden w-screen bg-blue-600 flex flex-col items-center gap-y-[4vh]">
+      <div className="h-[50vh] overflow-hidden w-screen bg-blue-600 flex flex-col items-center gap-y-[4vh] lg:h-screen lg:w-[45vw] lg:gap-[5vh] lg:pb-[6vh] lg:justify-end">
         <p className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]">
           ABC 123
         </p>
-        <p className="w-[90%] md:text-[24px] md:leading-8 text-sm">
+        <p className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
           ducimus ipsum soluta.
         </p>
-        <p className="w-[90%] md:text-[35px] md:leading-[40px] font-semibold text-xl">
+        <p className="w-[90%] md:text-[35px] md:leading-[40px] font-semibold text-xl lg:text-base lg:mt-[6vh]">
           View Case Study
         </p>
       </div>

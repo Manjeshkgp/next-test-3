@@ -4,15 +4,22 @@ import img2 from "../assets/nexgtv-mobile-app-ui-design.png";
 import Image from "next/image";
 import digitalCommImg from "../assets/world-communication-awards-for-best-digital-experience.png";
 
-interface FirstSectionProps {}
+interface FirstSectionProps {
+  scrollPosition: number;
+  vh: number;
+}
 
-const FirstSection: FC<FirstSectionProps> = ({}) => {
+const FirstSection: FC<FirstSectionProps> = ({ scrollPosition, vh }) => {
   return (
     <section
       id="section1"
-      className="flex flex-col w-screen lg:flex-row-reverse"
+      className={
+        scrollPosition < vh - 50
+          ? "flex flex-col w-screen lg:flex-row-reverse lg:fixed lg:z-[100]"
+          : "flex flex-col w-screen lg:flex-row-reverse"
+      }
     >
-      <div className="bg-[#958f85] h-[50vh] lg:h-screen lg:w-[50vw] w-screen flex justify-center items-end overflow-hidden lg:items-center">
+      <div className="bg-[#958f85] h-[50vh] lg:h-screen lg:w-[55vw] w-screen flex justify-center items-end overflow-hidden lg:items-center">
         <Image
           src={img1}
           alt="img1"
@@ -24,7 +31,7 @@ const FirstSection: FC<FirstSectionProps> = ({}) => {
           className="w-[65%] md:w-[50%] -mb-[12%] -ml-[6%] object-scale-down object-top lg:m-0 lg:-ml-[5vw]"
         />
       </div>
-      <div className="bg-purple-700 h-[50vh] lg:h-screen lg:w-[50vw] w-screen relative flex flex-col items-center gap-y-[2vh] lg:gap-y-[5vh] lg:justify-end lg:items-start lg:pl-[3vw]">
+      <div className="bg-purple-700 h-[50vh] lg:h-screen lg:w-[45vw] w-screen relative flex flex-col items-center gap-y-[2vh] lg:gap-y-[5vh] lg:justify-end lg:items-start lg:pl-[3vw]">
         <Image
           src={digitalCommImg}
           alt="img2"

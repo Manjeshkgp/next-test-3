@@ -1,30 +1,49 @@
 import { FC } from "react";
 import img1 from "../assets/veme-blockchain-app-developed.png";
-import img2 from '../assets/veme-app-ui-design.png';
+import img2 from "../assets/veme-app-ui-design.png";
 import Image from "next/image";
 
-interface SecondSectionProps {}
+interface SecondSectionProps {
+  scrollPosition: number;
+  vh: number;
+}
 
-const SecondSection: FC<SecondSectionProps> = ({}) => {
-  return (<section id="section2" className="flex flex-col w-screen h-screen">
-    <div className="h-[50vh] overflow-hidden w-screen bg-indigo-950 flex flex-row">
-    <Image
+const SecondSection: FC<SecondSectionProps> = ({ scrollPosition, vh }) => {
+  return (
+    <section
+      id="section2"
+      className={
+        scrollPosition > vh - 50 && scrollPosition < 2 * vh - 50
+          ? "flex flex-col w-screen lg:flex-row-reverse lg:fixed lg:z-[100]"
+          : "flex flex-col w-screen h-screen lg:flex-row-reverse"
+      }
+    >
+      <div className="h-[50vh] lg:h-screen overflow-hidden w-screen lg:w-[55vw] bg-indigo-950 flex flex-row lg:pl-[6vw] lg:justify-center">
+        <Image
           src={img1}
           alt="img1"
-          className="h-[80%] md:h-[90%] object-scale-down object-center self-end"
+          className="h-[80%] md:h-[90%] object-scale-down object-center self-end lg:h-[70%]"
         />
         <Image
           src={img2}
           alt="img2"
-          className="h-[80%] md:h-[90%] object-scale-down object-center self-start"
+          className="h-[80%] md:h-[90%] object-scale-down object-center self-start lg:h-[70%]"
         />
-    </div>
-    <div className="h-[50vh] overflow-hidden w-screen bg-gradient-to-br from-[#fa56fd] to-purple-700 flex flex-col items-center gap-y-[4vh]">
-    <p className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]">ABC 123</p>
-        <p className="w-[90%] md:text-[24px] md:leading-8 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ducimus ipsum soluta.</p>
-        <p className="w-[90%] md:text-[35px] md:leading-[40px] font-semibold text-xl">View Case Study</p>
-    </div>
-  </section>);
+      </div>
+      <div className="h-[50vh] lg:h-screen overflow-hidden w-screen lg:w-[45vw] bg-gradient-to-br from-[#fa56fd] to-purple-700 flex flex-col items-center gap-y-[4vh] lg:gap-y-[5vh] lg:justify-end lg:items-start lg:pl-[3vw] lg:pb-[6vh]">
+        <p className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]">
+          ABC 123
+        </p>
+        <p className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />{" "}
+          Facilis ducimus ipsum soluta.
+        </p>
+        <p className="w-[90%] md:text-[35px] md:leading-[40px] font-semibold text-xl lg:mb-[6vh] lg:text-base lg:mt-[6vh]">
+          View Case Study
+        </p>
+      </div>
+    </section>
+  );
 };
 
 export default SecondSection;
