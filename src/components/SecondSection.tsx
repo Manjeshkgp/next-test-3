@@ -43,7 +43,7 @@ const SecondSection: FC<SecondSectionProps> = ({ scrollPosition, vh }) => {
            
           className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]"
         >
-          We are the best web development company in the world
+          We are the best web development <br className="hidden lg:block"/> company in the world
         </p>
         <div className="flex w-full justify-start items-center gap-x-4 pl-[5vw] lg:pl-0 lg:mt-[6vh]">
           <p

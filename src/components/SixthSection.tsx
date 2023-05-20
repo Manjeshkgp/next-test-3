@@ -37,8 +37,8 @@ const SixthSection: FC<SixthSectionProps> = ({ scrollPosition, vh }) => {
           ABC 678
         </p>
         <p   className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
-          Best since 2017
-          We offer wide range of
+          Best since 2017 <br className="hidden lg:block"/>
+          We offer wide range of <br className="hidden lg:block"/>
           web development and app development.
         </p>
         <p   className="w-[90%] flex justify-start items-center gap-x-[2vw] md:text-[35px] md:leading-[40px] font-semibold text-xl lg:text-base lg:mt-[6vh]">

@@ -68,7 +68,7 @@ const FourthSection: FC<FourthSectionProps> = ({ scrollPosition, vh }) => {
           ABC 456
         </p>
         <p   className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
-          We are the best web development company in the world
+          We are the best <br className="hidden lg:block"/> web development company <br className="hidden lg:block"/> in the world
         </p>
         <p   className="w-[90%] md:text-[35px] flex justify-start items-center gap-x-[2vw] md:leading-[40px] font-semibold text-xl lg:text-base lg:mt-[6vh]">
           View Case Study <BsArrowRight/>

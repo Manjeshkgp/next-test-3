@@ -43,7 +43,7 @@ const SeventhSection: FC<SeventhSectionProps> = ({ scrollPosition, vh }) => {
           ABC 23478
         </p>
         <p   className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
-        We are the best web development company in the world
+        We are the best <br className="hidden lg:block"/> web development company <br className="hidden lg:block"/> in the world
 
         </p>
         <div className="flex w-full justify-start items-center gap-x-4 pl-[5vw] lg:pl-0 lg:mt-[6vh]">

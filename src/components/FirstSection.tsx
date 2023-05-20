@@ -43,7 +43,7 @@ const FirstSection: FC<FirstSectionProps> = ({ scrollPosition, vh }) => {
           ABC 123
         </p>
         <p   className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
-          We are the best web development company in the world
+          We are the best web development <br className="hidden lg:block"/> company in the world
         </p>
         <p   className="w-[90%] md:text-[35px] md:leading-[40px] flex justify-start items-center gap-x-[2vw] font-semibold text-xl lg:mb-[6vh] lg:text-base lg:mt-[6vh]">
           View Case Study <BsArrowRight/>

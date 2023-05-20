@@ -59,7 +59,7 @@ const FifthSection: FC<FifthSectionProps> = ({ scrollPosition, vh }) => {
           ABC 567
         </p>
         <p   className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
-          we are the best AR Development company in the world
+          we are the best AR <br className="hidden lg:block"/> Development company <br className="hidden lg:block"/> in the world
         </p>
         <p   className="w-[90%] flex justify-start items-center gap-x-[2vw] md:text-[35px] md:leading-[40px] font-semibold text-xl lg:text-base lg:mt-[6vh]">
           View Case Study <BsArrowRight/>
