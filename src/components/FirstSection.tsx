@@ -3,6 +3,7 @@ import img1 from "../assets/nexgtv-entertainment-mobile-app-development.png";
 import img2 from "../assets/nexgtv-mobile-app-ui-design.png";
 import Image from "next/image";
 import digitalCommImg from "../assets/world-communication-awards-for-best-digital-experience.png";
+import "aos/dist/aos.css";
 
 interface FirstSectionProps {
   scrollPosition: number;
@@ -14,7 +15,7 @@ const FirstSection: FC<FirstSectionProps> = ({ scrollPosition, vh }) => {
     <section
       id="section1"
       className={
-        scrollPosition < vh - 50
+        scrollPosition < vh - 5
           ? "flex flex-col w-screen lg:flex-row-reverse lg:fixed lg:z-[100]"
           : "flex flex-col w-screen lg:flex-row-reverse"
       }
@@ -37,14 +38,13 @@ const FirstSection: FC<FirstSectionProps> = ({ scrollPosition, vh }) => {
           alt="img2"
           className="h-[10vh] lg:h-[12vh] max-w-[70%] object-contain border-2 border-purple-700 absolute -top-[5%] left-[4%] rounded-lg bg-white lg:static"
         />
-        <p className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh] lg:mt-0">
+        <p data-aos="zoom-in-down" className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh] lg:mt-0">
           ABC 123
         </p>
-        <p className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-          ducimus ipsum soluta.
+        <p data-aos="zoom-in-down" className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
+          We are the best web development company in the world
         </p>
-        <p className="w-[90%] md:text-[35px] md:leading-[40px] font-semibold text-xl lg:mb-[6vh] lg:text-base lg:mt-[6vh]">
+        <p data-aos="zoom-in-down" className="w-[90%] md:text-[35px] md:leading-[40px] font-semibold text-xl lg:mb-[6vh] lg:text-base lg:mt-[6vh]">
           View Case Study
         </p>
       </div>

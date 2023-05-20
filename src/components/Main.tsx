@@ -8,11 +8,13 @@ import FifthSection from "@/components/FifthSection";
 import SixthSection from "@/components/SixthSection";
 import SeventhSection from "@/components/SeventhSection";
 import { useEffect, useState } from "react";
+import ScrollAnimation from "./ScrollAnimation";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Main() {
   //   const main = document.getElementById("main");
   // const vh = window.screen.width;
-  // const vh = window.screen.height;
   const vh = window.innerHeight;
   //   const [touch, setTouch] = useState<boolean>(true);
   //   useEffect(() => {
@@ -46,6 +48,7 @@ export default function Main() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
+    Aos.init({ duration: 500 });
     const handleScroll = () => {
       const currentPosition = window.pageYOffset;
       setScrollPosition(currentPosition);
@@ -54,11 +57,16 @@ export default function Main() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <main
       id="main"
-      className="flex flex-row overflow-x-scroll lg:flex-col lg:overflow-x-hidden transition-all"
+      className="flex flex-row overflow-x-scroll text-white lg:flex-col lg:overflow-x-hidden transition-all lg:h-[700vh]"
     >
+      <p className="fixed hidden lg:block bottom-[5vh] text-[2vw] left-[35vw] z-[111] tracking-[0.8vw]">
+        SKIP
+      </p>
+      <ScrollAnimation scrollPosition={scrollPosition} vh={vh} />
       <FirstSection scrollPosition={scrollPosition} vh={vh} />
       <SecondSection scrollPosition={scrollPosition} vh={vh} />
       <ThirdSection scrollPosition={scrollPosition} vh={vh} />

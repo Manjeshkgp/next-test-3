@@ -7,7 +7,7 @@ import bg1 from "../assets/dominos-bread.png";
 import bg2 from "../assets/dominos-masala.png";
 import bg3 from "../assets/dominos-bread1.png";
 import Image from "next/image";
-
+import "aos/dist/aos.css";
 interface FourthSectionProps {
   scrollPosition: number;
   vh: number;
@@ -18,7 +18,7 @@ const FourthSection: FC<FourthSectionProps> = ({ scrollPosition, vh }) => {
     <section
       id="section4"
       className={
-        scrollPosition > 3 * vh - 50 && scrollPosition < 4 * vh - 50
+        scrollPosition > 3 * vh - 5 && scrollPosition < 4 * vh - 5
           ? "flex flex-col w-screen lg:flex-row-reverse lg:fixed lg:z-[100]"
           : "flex flex-col w-screen h-screen lg:flex-row-reverse"
       }
@@ -62,15 +62,14 @@ const FourthSection: FC<FourthSectionProps> = ({ scrollPosition, vh }) => {
           />
         </div>
       </div>
-      <div className="h-[50vh] overflow-hidden w-screen bg-slate-800 flex flex-col items-center gap-y-[4vh] lg:h-screen lg:w-[45vw] lg:justify-end lg:pb-[6vh] lg:gap-[5vh]">
-        <p className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]">
-          ABC 123
+      <div className="h-[50vh] overflow-hidden w-screen bg-slate-800 flex flex-col items-center gap-y-[4vh] lg:h-screen lg:w-[45vw] lg:justify-end lg:pl-[3vw] lg:items-start lg:pb-[6vh] lg:gap-[5vh]">
+        <p data-aos="zoom-in-down" className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]">
+          ABC 456
         </p>
-        <p className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm">
-          Lorem ipsum dolor sit <br /> amet consectetur adipisicing elit.
-          <br /> Facilis ducimus ipsum soluta.
+        <p data-aos="zoom-in-down" className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
+          We are the best web development company in the world
         </p>
-        <p className="w-[90%] md:text-[35px] md:leading-[40px] font-semibold text-xl lg:text-base lg:mt-[6vh]">
+        <p data-aos="zoom-in-down" className="w-[90%] md:text-[35px] md:leading-[40px] font-semibold text-xl lg:text-base lg:mt-[6vh]">
           View Case Study
         </p>
       </div>

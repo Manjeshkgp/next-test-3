@@ -2,6 +2,7 @@ import { FC } from "react";
 import img1 from "../assets/veme-blockchain-app-developed.png";
 import img2 from "../assets/veme-app-ui-design.png";
 import Image from "next/image";
+import "aos/dist/aos.css";
 
 interface SecondSectionProps {
   scrollPosition: number;
@@ -13,7 +14,7 @@ const SecondSection: FC<SecondSectionProps> = ({ scrollPosition, vh }) => {
     <section
       id="section2"
       className={
-        scrollPosition > vh - 50 && scrollPosition < 2 * vh - 50
+        scrollPosition > vh - 5 && scrollPosition < 2 * vh - 5
           ? "flex flex-col w-screen lg:flex-row-reverse lg:fixed lg:z-[100]"
           : "flex flex-col w-screen h-screen lg:flex-row-reverse"
       }
@@ -31,15 +32,14 @@ const SecondSection: FC<SecondSectionProps> = ({ scrollPosition, vh }) => {
         />
       </div>
       <div className="h-[50vh] lg:h-screen overflow-hidden w-screen lg:w-[45vw] bg-gradient-to-br from-[#fa56fd] to-purple-700 flex flex-col items-center gap-y-[4vh] lg:gap-y-[5vh] lg:justify-end lg:items-start lg:pl-[3vw] lg:pb-[6vh]">
-        <p className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]">
-          ABC 123
+        <p data-aos="zoom-in-down" className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]">
+          ABC 234
         </p>
-        <p className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />{" "}
-          Facilis ducimus ipsum soluta.
+        <p data-aos="zoom-in-down" className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
+        We are the best web development company in the world
         </p>
-        <p className="w-[90%] md:text-[35px] md:leading-[40px] font-semibold text-xl lg:mb-[6vh] lg:text-base lg:mt-[6vh]">
-          View Case Study
+        <p data-aos="zoom-in-down" className="w-[90%] md:text-[35px] opacity-60 md:leading-[40px] font-semibold text-xl lg:text-base lg:mt-[6vh]">
+          Comming Soon
         </p>
       </div>
     </section>
