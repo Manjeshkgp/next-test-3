@@ -30,6 +30,7 @@ const ScrollAnimation: FC<ScrollAnimationProps> = ({ scrollPosition, vh }) => {
     if (scrollPosition >= 5 * vh && scrollPosition < 6 * vh) {
       return "bg-[#1E40AF]";
     }
+    
     return "bg-[#059669]";
   };
   return (

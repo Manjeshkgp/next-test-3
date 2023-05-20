@@ -15,11 +15,12 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function Main() {
-  const vh = global.window.innerHeight;
+  const [vh, setvh] = useState(100);
   const [scrollPosition, setScrollPosition] = useState(0);
   useEffect(() => {
     Aos.init({ duration: 500 });
     // setTouch(false);
+    setvh(window.innerHeight);
     const handleScroll = () => {
       const currentPosition = window.pageYOffset;
       setScrollPosition(currentPosition);
@@ -29,39 +30,42 @@ export default function Main() {
   }, []);
   return (
     <>
-      <Carousel
-        showThumbs={false}
-        showStatus={false}
-        emulateTouch={true}
-        swipeable={true}
-        dynamicHeight={false}
-        infiniteLoop={true}
-        autoPlay={true}
-        interval={2000}
-        className="lg:hidden w-screen h-screen"
-      >
-        <div className="h-screen w-screen">
-          <FirstSection scrollPosition={scrollPosition} vh={vh} />
-        </div>
-        <div className="h-screen w-screen">
-          <SecondSection scrollPosition={scrollPosition} vh={vh} />
-        </div>
-        <div className="h-screen w-screen">
-          <ThirdSection scrollPosition={scrollPosition} vh={vh} />
-        </div>
-        <div className="h-screen w-screen">
-          <FourthSection scrollPosition={scrollPosition} vh={vh} />
-        </div>
-        <div className="h-screen w-screen">
-          <FifthSection scrollPosition={scrollPosition} vh={vh} />
-        </div>
-        <div className="h-screen w-screen">
-          <SixthSection scrollPosition={scrollPosition} vh={vh} />
-        </div>
-        <div className="h-screen w-screen">
-          <SeventhSection scrollPosition={scrollPosition} vh={vh} />
-        </div>
-      </Carousel>
+      <div className="lg:hidden">
+        <Carousel
+          // showThumbs={false}
+          showArrows={false}
+          showStatus={false}
+          emulateTouch={true}
+          swipeable={true}
+          dynamicHeight={false}
+          infiniteLoop={true}
+          autoPlay={true}
+          interval={2000}
+          className="lg:hidden w-screen h-screen"
+        >
+          <div className="h-screen w-screen">
+            <FirstSection scrollPosition={scrollPosition} vh={vh} />
+          </div>
+          <div className="h-screen w-screen">
+            <SecondSection scrollPosition={scrollPosition} vh={vh} />
+          </div>
+          <div className="h-screen w-screen">
+            <ThirdSection scrollPosition={scrollPosition} vh={vh} />
+          </div>
+          <div className="h-screen w-screen">
+            <FourthSection scrollPosition={scrollPosition} vh={vh} />
+          </div>
+          <div className="h-screen w-screen">
+            <FifthSection scrollPosition={scrollPosition} vh={vh} />
+          </div>
+          <div className="h-screen w-screen">
+            <SixthSection scrollPosition={scrollPosition} vh={vh} />
+          </div>
+          <div className="h-screen w-screen">
+            <SeventhSection scrollPosition={scrollPosition} vh={vh} />
+          </div>
+        </Carousel>
+      </div>
       <main
         id="main"
         className="hidden lg:flex flex-row overflow-x-auto scroll-smooth text-white lg:flex-col lg:overflow-x-hidden transition-all lg:h-[700vh]"

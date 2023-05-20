@@ -3,6 +3,7 @@ import img1 from "../assets/nasa-fitness-tracking-mobile-app.png";
 import img2 from "../assets/measure-total-body-weight-through-fitness-app.png";
 import Image from "next/image";
 import "aos/dist/aos.css";
+import SpanTextBtn from "./SpanTextBtn";
 
 interface ThirdSectionProps {
   scrollPosition: number;
@@ -32,15 +33,20 @@ const ThirdSection: FC<ThirdSectionProps> = ({ scrollPosition, vh }) => {
         />
       </div>
       <div className="h-[50vh] overflow-hidden w-screen bg-indigo-950 flex flex-col items-center gap-y-[4vh] lg:h-screen lg:w-[45vw] lg:justify-end lg:pb-[6vh] lg:pl-[3vw] lg:items-start lg:gap-y-[5vh]">
-        <p data-aos="zoom-in-down" className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]">
+        <p   className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]">
           ABC 345
         </p>
-        <p data-aos="zoom-in-down" className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
+        <p   className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
         We are the best web development company in the world
         </p>
-        <p data-aos="zoom-in-down" className="w-[90%] opacity-60 md:text-[35px] md:leading-[40px] font-semibold text-xl lg:text-base lg:mt-[6vh]">
-         Comming Soon
-        </p>
+        <div className="flex w-full justify-start items-center gap-x-4 pl-[5vw] lg:pl-0 lg:mt-[6vh]">
+          <p
+           
+          className="max-w-[90%] w-max md:text-[35px] opacity-60 md:leading-[40px] font-semibold text-xl lg:text-base"
+        >
+          Comming Soon
+        </p><SpanTextBtn className="bg-white text-sm text-indigo-950"/>
+        </div>
       </div>
     </section>
   );

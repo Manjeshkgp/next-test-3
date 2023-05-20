@@ -3,6 +3,7 @@ import bgImg from "../assets/erp-app-development-service.png";
 import parentBg from "../assets/interior.jpg";
 import Image from "next/image";
 import "aos/dist/aos.css";
+import {BsArrowRight} from "react-icons/bs";
 
 interface SixthSectionProps {
   scrollPosition: number;
@@ -32,16 +33,16 @@ const SixthSection: FC<SixthSectionProps> = ({ scrollPosition, vh }) => {
         />
       </div>
       <div className="h-[50vh] overflow-hidden w-screen bg-blue-800 flex flex-col items-center gap-y-[4vh] lg:w-[45vw] lg:h-screen lg:gap-y-[5vh] lg:pl-[3vw] lg:items-start lg:justify-end lg:pb-[6vh]">
-        <p data-aos="zoom-in-down" className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]">
+        <p   className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]">
           ABC 678
         </p>
-        <p data-aos="zoom-in-down" className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
+        <p   className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
           Best since 2017
           We offer wide range of
           web development and app development.
         </p>
-        <p data-aos="zoom-in-down" className="w-[90%] md:text-[35px] md:leading-[40px] font-semibold text-xl lg:text-base lg:mt-[6vh]">
-          View Case Study
+        <p   className="w-[90%] flex justify-start items-center gap-x-[2vw] md:text-[35px] md:leading-[40px] font-semibold text-xl lg:text-base lg:mt-[6vh]">
+          View Case Study <BsArrowRight/>
         </p>
       </div>
     </section>

@@ -3,6 +3,7 @@ import img1 from "../assets/veme-blockchain-app-developed.png";
 import img2 from "../assets/veme-app-ui-design.png";
 import Image from "next/image";
 import "aos/dist/aos.css";
+import SpanTextBtn from "./SpanTextBtn";
 
 interface SecondSectionProps {
   scrollPosition: number;
@@ -33,23 +34,25 @@ const SecondSection: FC<SecondSectionProps> = ({ scrollPosition, vh }) => {
       </div>
       <div className="h-[50vh] lg:h-screen overflow-hidden w-screen lg:w-[45vw] bg-gradient-to-br from-[#fa56fd] to-purple-700 lg:from-indigo-700 lg:to-indigo-700 flex flex-col items-center gap-y-[4vh] lg:gap-y-[5vh] lg:justify-end lg:items-start lg:pl-[3vw] lg:pb-[6vh]">
         <p
-          data-aos="zoom-in-down"
+           
           className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]"
         >
           ABC 234
         </p>
         <p
-          data-aos="zoom-in-down"
+           
           className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]"
         >
           We are the best web development company in the world
         </p>
-        <p
-          data-aos="zoom-in-down"
-          className="w-[90%] md:text-[35px] opacity-60 md:leading-[40px] font-semibold text-xl lg:text-base lg:mt-[6vh]"
+        <div className="flex w-full justify-start items-center gap-x-4 pl-[5vw] lg:pl-0 lg:mt-[6vh]">
+          <p
+           
+          className="max-w-[90%] w-max md:text-[35px] opacity-60 md:leading-[40px] font-semibold text-xl lg:text-base"
         >
-          Comming Soon
-        </p>
+          Comming Soon 
+        </p><SpanTextBtn className="bg-pink-500 text-sm text-white"/>
+        </div>
       </div>
     </section>
   );
