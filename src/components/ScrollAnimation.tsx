@@ -16,7 +16,7 @@ const ScrollAnimation: FC<ScrollAnimationProps> = ({ scrollPosition, vh }) => {
       return "bg-[#7E22CE]";
     }
     if (scrollPosition >= vh && scrollPosition < 2 * vh) {
-      return "bg-gradient-to-r from-[#C03EE7] to-[#A332DA]";
+      return "bg-indigo-700";
     }
     if (scrollPosition >= 2 * vh && scrollPosition < 3 * vh) {
       return "bg-[#1E1B4B]";
