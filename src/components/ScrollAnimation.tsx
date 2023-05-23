@@ -40,49 +40,49 @@ const ScrollAnimation: FC<ScrollAnimationProps> = ({ scrollPosition, vh }) => {
         svgBg()
       )}
     >
-      <div data-aos="zoom-in-down" className={scrollPosition >= 6 * vh && scrollPosition < 7 * vh?"absolute top-[6.5vw] -left-[0] w-max flex-col flex items-start":"hidden"}>
+      <div data-aos='flip-up' className={scrollPosition >= 6 * vh?"absolute top-[6.5vw] -left-[0] w-max flex-col flex items-start":"hidden"}>
         <p className="text-[1.7vw]">Biggest Classifieds</p>
         <p className="text-[3.5vw] font-bold">East Asia</p>
         <div className="flex text-[1.8vw] flex-row-reverse items-center w-full">
           <p>Countries</p>
         </div>
       </div>
-      <div data-aos="zoom-in-down" className={scrollPosition >= 5 * vh && scrollPosition < 6 * vh?"absolute top-[6.5vw] -left-[6vw] w-max flex-col flex items-start":"hidden"}>
+      <div data-aos='flip-up' className={scrollPosition >= 5 * vh && scrollPosition < 6 * vh?"absolute top-[6.5vw] -left-[6vw] w-max flex-col flex items-start":"hidden"}>
         <p className="text-[1.7vw]">Developing ERP Solution for</p>
         <p className="text-[3.5vw] font-bold">Text Headline</p>
         <div className="flex text-[1.8vw] flex-row-reverse items-center w-full">
           <p>in furniture industry</p>
         </div>
       </div>
-      <div data-aos="zoom-in-down" className={scrollPosition >= 4 * vh && scrollPosition < 5 * vh?"absolute top-[6vw] -left-[6vw] w-max flex-col flex items-start":"hidden"}>
+      <div data-aos='flip-up' className={scrollPosition >= 4 * vh && scrollPosition < 5 * vh?"absolute top-[6vw] -left-[6vw] w-max flex-col flex items-start":"hidden"}>
         <p className="text-[1.7vw]">Text Headline</p>
         <p className="text-[3.5vw] font-bold">Text Headline</p>
         <div className="flex text-[1.8vw] flex-row-reverse items-center w-full">
           <p>Footer Headline</p>
         </div>
       </div>
-      <div data-aos="zoom-in-down" className={scrollPosition >= 3 * vh && scrollPosition < 4 * vh?"absolute top-[6vw] -left-[6vw] w-max flex-col flex items-start":"hidden"}>
+      <div data-aos='flip-up' className={scrollPosition >= 3 * vh && scrollPosition < 4 * vh?"absolute top-[6vw] -left-[6vw] w-max flex-col flex items-start":"hidden"}>
         <p className="text-[1.7vw]">Redifining</p>
         <p className="text-[3.5vw] font-bold">UX Strategy</p>
         <div className="flex text-[1.8vw] flex-row-reverse items-center w-full">
           <p>and UI design</p>
         </div>
       </div>
-      <div data-aos="zoom-in-down" className={scrollPosition >= 2 * vh && scrollPosition < 3 * vh?"absolute top-[6vw] -left-[4vw] w-max flex-col flex items-start":"hidden"}>
+      <div data-aos='flip-up' className={scrollPosition >= 2 * vh && scrollPosition < 3 * vh?"absolute top-[6vw] -left-[4vw] w-max flex-col flex items-start":"hidden"}>
         <p className="text-[1.7vw]">Powered by advance</p>
         <div className="flex flex-row-reverse items-center w-full"><Image src={nasaLogo} alt="NASA Logo" className="h-[6vw] object-contain"/></div>
         <div className="flex text-[1.8vw] flex-row-reverse items-center w-full">
           <p>algorithms</p>
         </div>
       </div>
-      <div data-aos="zoom-in-down" className={scrollPosition >= 1 * vh && scrollPosition < 2 * vh?"absolute top-[6vw] -left-[6vw] w-max flex-col flex items-start":"hidden"}>
+      <div data-aos='flip-up' className={scrollPosition >= 1 * vh && scrollPosition < 2 * vh?"absolute top-[6vw] -left-[6vw] w-max flex-col flex items-start":"hidden"}>
         <p className="text-[1.7vw]">The Next Big</p>
         <p className="text-[3.5vw] font-bold">Blockchain</p>
         <div className="flex text-[1.8vw] flex-row-reverse items-center w-full">
           <p>Revolution</p>
         </div>
       </div>
-      <div data-aos="zoom-in-down" className={scrollPosition >= 0 * vh && scrollPosition < 1 * vh?"absolute top-[6vw] -left-[12vw] w-max flex-col flex items-start":"hidden"}>
+      <div data-aos='flip-up' className={scrollPosition >= 0 * vh && scrollPosition < 1 * vh?"absolute top-[6vw] -left-[12vw] w-max flex-col flex items-start":"hidden"}>
         {/* <p className="text-[1.7vw]">The Next Big</p> */}
         <p className="text-[3.5vw] font-bold">25M+ Downloads</p>
         <div className="flex text-[1.8vw] flex-row-reverse items-center w-full">

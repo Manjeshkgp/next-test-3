@@ -11,6 +11,7 @@ interface SecondSectionProps {
 }
 
 const SecondSection: FC<SecondSectionProps> = ({ scrollPosition, vh }) => {
+  
   return (
     <section
       id="section2"
@@ -22,11 +23,13 @@ const SecondSection: FC<SecondSectionProps> = ({ scrollPosition, vh }) => {
     >
       <div className="h-[50vh] lg:h-screen overflow-hidden w-screen lg:w-[55vw] bg-indigo-950 flex flex-row lg:pl-[6vw] lg:justify-center">
         <Image
+          data-aos={scrollPosition>=vh?'fade-up':"fade-down"}
           src={img1}
           alt="img1"
           className="h-[80%] md:h-[90%] object-scale-down object-center self-end lg:h-[70%]"
         />
         <Image
+        data-aos="fade-down"
           src={img2}
           alt="img2"
           className="h-[80%] md:h-[90%] object-scale-down object-center self-start lg:h-[70%]"
@@ -34,20 +37,19 @@ const SecondSection: FC<SecondSectionProps> = ({ scrollPosition, vh }) => {
       </div>
       <div className="h-[50vh] lg:h-screen overflow-hidden w-screen lg:w-[45vw] bg-gradient-to-br from-[#fa56fd] to-purple-700 lg:from-indigo-700 lg:to-indigo-700 flex flex-col items-center gap-y-[4vh] lg:gap-y-[5vh] lg:justify-end lg:items-start lg:pl-[3vw] lg:pb-[6vh]">
         <p
-           
+          data-aos='flip-up' 
           className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]"
         >
           ABC 234
         </p>
         <p
-           
+           data-aos='flip-up'
           className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]"
         >
           We are the best web development <br className="hidden lg:block"/> company in the world
         </p>
-        <div className="flex w-full justify-start items-center gap-x-4 pl-[5vw] lg:pl-0 lg:mt-[6vh]">
+        <div data-aos='flip-up' className="flex w-full justify-start items-center gap-x-4 pl-[5vw] lg:pl-0 lg:mt-[6vh]">
           <p
-           
           className="max-w-[90%] w-max md:text-[35px] opacity-60 md:leading-[40px] font-semibold text-xl lg:text-base"
         >
           Comming Soon 

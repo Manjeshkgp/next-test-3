@@ -74,13 +74,13 @@ export default function Main() {
           SKIP
         </p>
         <ScrollAnimation scrollPosition={scrollPosition} vh={vh} />
-        <FirstSection scrollPosition={scrollPosition} vh={vh} />
-        <SecondSection scrollPosition={scrollPosition} vh={vh} />
-        <ThirdSection scrollPosition={scrollPosition} vh={vh} />
-        <FourthSection scrollPosition={scrollPosition} vh={vh} />
-        <FifthSection scrollPosition={scrollPosition} vh={vh} />
-        <SixthSection scrollPosition={scrollPosition} vh={vh} />
-        <SeventhSection scrollPosition={scrollPosition} vh={vh} />
+        {scrollPosition<=vh+5&&<FirstSection scrollPosition={scrollPosition} vh={vh} />}
+        {scrollPosition>=vh-5&&scrollPosition<=2*vh+5&&<SecondSection scrollPosition={scrollPosition} vh={vh} />}
+        {scrollPosition>=2*vh-5&&scrollPosition<=3*vh+5&&<ThirdSection scrollPosition={scrollPosition} vh={vh} />}
+        {scrollPosition>=3*vh-5&&scrollPosition<=4*vh+5&&<FourthSection scrollPosition={scrollPosition} vh={vh} />}
+        {scrollPosition>=4*vh-5&&scrollPosition<=5*vh+5&&<FifthSection scrollPosition={scrollPosition} vh={vh} />}
+        {scrollPosition>=5*vh-5&&scrollPosition<=6*vh&&<SixthSection scrollPosition={scrollPosition} vh={vh} />}
+        {scrollPosition>=6*vh-5&&<SeventhSection scrollPosition={scrollPosition} vh={vh} />}
       </main>
     </>
   );

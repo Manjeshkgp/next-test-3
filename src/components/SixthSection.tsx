@@ -22,9 +22,10 @@ const SixthSection: FC<SixthSectionProps> = ({ scrollPosition, vh }) => {
     >
       <div className="h-[50vh] overflow-hidden relative w-screen flex flex-col justify-center items-center lg:w-[55vw] lg:h-screen">
         <Image
+        data-aos='fade-up'
           src={bgImg}
           alt="bgImg"
-          className="h-[50vh] object-center z-10 scale-110 object-cover lg:object-cover lg:w-[50vw] lg:h-[100vh]"
+          className="h-[50vh] object-center z-10 scale-110 object-cover lg:min-w-[50vw] lg:min-h-[100vh]"
         />
         <Image
           src={parentBg}
@@ -33,15 +34,15 @@ const SixthSection: FC<SixthSectionProps> = ({ scrollPosition, vh }) => {
         />
       </div>
       <div className="h-[50vh] overflow-hidden w-screen bg-blue-800 flex flex-col items-center gap-y-[4vh] lg:w-[45vw] lg:h-screen lg:gap-y-[5vh] lg:pl-[3vw] lg:items-start lg:justify-end lg:pb-[6vh]">
-        <p   className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]">
+        <p data-aos='flip-up' className="w-[90%] md:text-[40px] md:leading-[45px] font-bold text-3xl mt-[15vh]">
           ABC 678
         </p>
-        <p   className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
+        <p data-aos='flip-up' className="w-[90%] md:text-[24px] md:leading-8 text-sm lg:text-sm lg:-mt-[3vh]">
           Best since 2017 <br className="hidden lg:block"/>
           We offer wide range of <br className="hidden lg:block"/>
           web development and app development.
         </p>
-        <p   className="w-[90%] flex justify-start items-center gap-x-[2vw] md:text-[35px] md:leading-[40px] font-semibold text-xl lg:text-base lg:mt-[6vh]">
+        <p data-aos='flip-up' className="w-[90%] flex justify-start items-center gap-x-[2vw] md:text-[35px] md:leading-[40px] font-semibold text-xl lg:text-base lg:mt-[6vh]">
           View Case Study <BsArrowRight/>
         </p>
       </div>
